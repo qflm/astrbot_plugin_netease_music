@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 插件运行时缓存（下载的音频）
+cache/
+*.mp3.part
+
+# 编辑器
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

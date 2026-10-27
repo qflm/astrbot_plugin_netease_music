@@ -1,0 +1,7 @@
+name: astrbot_plugin_netease_music
+display_name: 网易云点歌
+desc: 发送 /点歌 歌名 搜索网易云音乐，回复序号即可将歌曲以语音消息发送，全程无需登录
+version: v1.0.2
+author: qflm
+repo: https://github.com/qflm/astrbot_plugin_netease_music
+astrbot_version: ">=4.0.0"

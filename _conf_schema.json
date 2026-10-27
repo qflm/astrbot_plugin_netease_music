@@ -1,0 +1,81 @@
+{
+  "max_results": {
+    "description": "搜索结果数量",
+    "type": "int",
+    "default": 8,
+    "slider": {
+      "min": 1,
+      "max": 20,
+      "step": 1
+    },
+    "hint": "每次 /点歌 最多返回多少首候选歌曲"
+  },
+  "select_timeout": {
+    "description": "选歌超时时间（秒）",
+    "type": "int",
+    "default": 120,
+    "slider": {
+      "min": 10,
+      "max": 600,
+      "step": 10
+    },
+    "hint": "超过该时间后列表失效，需要重新点歌"
+  },
+  "send_mode": {
+    "description": "语音发送方式",
+    "type": "string",
+    "default": "auto",
+    "options": [
+      "auto",
+      "base64",
+      "path",
+      "url"
+    ],
+    "hint": "auto=小文件用 base64、大文件用直链；path=本地路径（Bot 与协议端同机时最快）；url=直接发直链"
+  },
+  "max_base64_mb": {
+    "description": "base64 发送的文件大小上限（MB）",
+    "type": "int",
+    "default": 6,
+    "slider": {
+      "min": 1,
+      "max": 50,
+      "step": 1
+    },
+    "hint": "auto 模式下，不超过该大小的音频用 base64 发送，超过则改用直链"
+  },
+  "quality": {
+    "description": "音质码率（补源时使用）",
+    "type": "string",
+    "default": "320",
+    "options": [
+      "128",
+      "192",
+      "320"
+    ],
+    "hint": "官方外链取不到时，第三方源按该码率请求"
+  },
+  "max_duration": {
+    "description": "单曲时长上限（秒）",
+    "type": "int",
+    "default": 0,
+    "hint": "0 表示不限制；超过上限的歌曲会被拒绝播放"
+  },
+  "enable_cache": {
+    "description": "启用本地缓存",
+    "type": "bool",
+    "default": true,
+    "hint": "同一首歌第二次点播时直接复用本地文件"
+  },
+  "cache_max_mb": {
+    "description": "缓存占用上限（MB）",
+    "type": "int",
+    "default": 200,
+    "hint": "超过后按时间顺序清理最旧的缓存文件，0 表示不清理"
+  },
+  "notify_before_send": {
+    "description": "发送前提示「正在准备」",
+    "type": "bool",
+    "default": true
+  }
+}
